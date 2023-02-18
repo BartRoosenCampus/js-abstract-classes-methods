@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Abstract classes and methods</title>
+    <script type="module" src="js/main.js" defer></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="content-container">
+    <section>
+        <header>
+            <h1>Abstract classes and methods</h1>
+            <div class="line"></div>
+        </header>
+        <article>
+            <p>
+                In JavaScript, there is no built-in support for abstract classes, but you can simulate them using some
+                techniques.
+                One approach is to use a combination of the class keyword, the new.target meta-property, and the throw
+                statement to
+                create a class that cannot be instantiated directly, but only by its derived classes.
+            </p>
+            <p>
+                Here's an example of how you can make the Animal class abstract:
+            </p>
+            <img src="img/example1.png" alt="code example">
+            <p>
+                In this example, the Animal class has a constructor method that throws an error if it is called directly
+                using the
+                new operator. The new.target meta-property is used to determine whether the constructor was called by
+                the derived
+                class or not. If the constructor was called by Animal directly, it throws an error.
+            </p>
+            <p>
+                The Animal class also defines an abstract method called makeSound that must be implemented by any
+                derived class.
+                If the method is called on an instance of Animal, it will throw an error.
+            </p>
+            <p>
+                You can then create a derived class from Animal and implement the makeSound method:
+            </p>
+            <img src="img/example2.png" alt="code example">
+            <p>
+                In this example, the Cat class extends Animal and overrides the makeSound method to make a "Meow" sound.
+            </p>
+            <p>
+                Now you can create an instance of the Cat class:
+            </p>
+            <img src="img/example3.png" alt="code example">
+            <p>
+                You cannot create an instance of the Animal class directly, because it is abstract:
+            </p>
+            <img src="img/example4.png" alt="code example">
+            <p>
+                Inspect the code in this example (main.js, Animal.js, Cat.js and Dog.js). In the main.js file instances
+                of Cat, Dog
+                and Animal are initiated.
+            </p>
+            <img src="img/example5.png" alt="console log">
+            <p>
+                Here is the output in the console log for the code above:
+            </p>
+            <img src="img/console.log.png" alt="console log">
+        </article>
+    </section>
+</div>
+<div class="filler"></div>
+</body>
+</html>
