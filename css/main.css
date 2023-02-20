@@ -28,6 +28,13 @@ img {
     margin-left: 2rem;
 }
 
+.logo {
+    border-radius: 0;
+    border: none;
+    float: right;
+    height: 6.3rem;
+}
+
 .filler {
     min-height: 3rem;
 }
